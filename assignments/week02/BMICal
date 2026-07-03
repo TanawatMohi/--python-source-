@@ -1,0 +1,29 @@
+def calculate_bmi(weight_KG, height_M):
+    if height_M <= 0:
+        raise ValueError("Height must be greater than zero")
+    return weight_KG / (height_M ** 2)
+
+
+def bmi_category(bmi):
+    if bmi < 18.5:
+        return "Underweight"
+    if bmi < 25.0:
+        return "Normal weight"
+    if bmi < 30.0:
+        return "Overweight"
+    return "Obese"
+
+
+def main():
+    try:
+        weight = float(input("Weight (KG): "))
+        height = float(input("Height (M): "))
+        bmi = calculate_bmi(weight, height)
+        print(f"BMI: {bmi:.1f}")
+        print(bmi_category(bmi))
+    except ValueError:
+        print("Invalid input. Please enter numeric values for weight and height.")
+
+
+if __name__ == "__main__":
+    main()

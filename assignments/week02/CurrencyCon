@@ -1,0 +1,27 @@
+rate = 35.5
+
+print("Choose convert direction:")
+print("1: THB to USD")
+print("2: USD to THB")
+choice = input("Enter 1 or 2: ").strip()
+
+if choice == "1":
+    thb_amount = input("Enter amount in THB: ").strip()
+    try:
+        thb = float(thb_amount)
+        usd = thb / rate
+        print(f"{thb:.2f} THB = {usd:.2f} USD")
+        print(f"Calculation: {thb:.2f} / {rate} = {usd:.2f}")
+    except ValueError:
+        print("Invalid THB amount.")
+elif choice == "2":
+    usd_amount = input("Enter amount in USD: ").strip()
+    try:
+        usd = float(usd_amount)
+        thb = usd * rate
+        print(f"{usd:.2f} USD = {thb:.2f} THB")
+        print(f"Calculation: {usd:.2f} * {rate} = {thb:.2f}")
+    except ValueError:
+        print("Invalid USD amount.")
+else:
+    print("Invalid choice.")

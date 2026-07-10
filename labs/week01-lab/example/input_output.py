@@ -103,7 +103,7 @@ print("\n=== Exercise 8: Practice Problems ===")
 # Problem 1: Ask for user's name and age, then calculate birth year
 user_name = input("What's your name? ")
 user_age = int(input("How old are you? "))
-birth_year = 2024 - user_age
+birth_year = 2026 - user_age
 print(user_name + ", you were born in approximately", birth_year)
 
 # Problem 2: Convert temperature from Celsius to Fahrenheit

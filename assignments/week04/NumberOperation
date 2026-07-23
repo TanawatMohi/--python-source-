@@ -1,0 +1,22 @@
+def number_operations():
+    numbers = []
+    print("Enter 10 numbers:")
+    for i in range(10):
+        value = float(input(f"Number {i + 1}: "))
+        numbers.append(value)
+    print(f"Original numbers: {numbers}")
+    even_numbers = [n for n in numbers if n % 2 == 0]
+    odd_numbers = [n for n in numbers if n % 2 != 0]
+    total = sum(numbers)
+    average = total / len(numbers)
+    above_average = [n for n in numbers if n > average]
+    print(f"List of even numbers: {even_numbers}")
+    print(f"List of odd numbers: {odd_numbers}")
+    print(f"List of numbers greater than the average: {above_average}")
+    print(f"Sum: {total}")
+    print(f"Average: {average}")
+    print(f"Min: {min(numbers)}")
+    print(f"Max: {max(numbers)}")
+
+if __name__ == "__main__":
+    number_operations()

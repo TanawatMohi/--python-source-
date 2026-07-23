@@ -1,0 +1,68 @@
+def personal_info_manager():
+    person = ("", 0, "", "")
+    hobbies = []
+    name = input("Enter name: ").strip()
+    age = input("Enter age: ").strip()
+    city = input("Enter city: ").strip()
+    country = input("Enter country: ").strip()
+    try:
+        age_value = int(age)
+    except ValueError:
+        age_value = 0
+    person = (name, age_value, city, country)
+
+    while True:
+        print("\nPersonal Information")
+        print(f"Name: {person[0]}")
+        print(f"Age: {person[1]}")
+        print(f"City: {person[2]}")
+        print(f"Country: {person[3]}")
+        print("Hobbies:")
+        if hobbies:
+            for index, hobby in enumerate(hobbies, start=1):
+                print(f"  {index}. {hobby}")
+        else:
+            print("  No hobbies added.")
+        print("\nOptions:")
+        print("1. Add hobby")
+        print("2. Remove hobby")
+        print("3. Update age")
+        print("4. Exit")
+        choice = input("Choose an option: ").strip()
+        if choice == "1":
+            new_hobby = input("Enter a new hobby: ").strip()
+            if new_hobby:
+                hobbies.append(new_hobby)
+                print(f"Added hobby: {new_hobby}")
+            else:
+                print("No hobby entered.")
+        elif choice == "2":
+            if not hobbies:
+                print("No hobbies to remove.")
+                continue
+            remove_index = input("Enter hobby number to remove: ").strip()
+            try:
+                idx = int(remove_index) - 1
+                if 0 <= idx < len(hobbies):
+                    removed = hobbies.pop(idx)
+                    print(f"Removed hobby: {removed}")
+                else:
+                    print("Invalid hobby number.")
+            except ValueError:
+                print("Please enter a valid number.")
+        elif choice == "3":
+            new_age = input("Enter new age: ").strip()
+            try:
+                new_age_value = int(new_age)
+                person = (person[0], new_age_value, person[2], person[3])
+                print(f"Age updated to: {new_age_value}")
+            except ValueError:
+                print("Invalid age.")
+        elif choice == "4":
+            print("Exiting.")
+            break
+        else:
+            print("Invalid option. Please choose 1-4.")
+
+if __name__ == "__main__":
+    personal_info_manager()

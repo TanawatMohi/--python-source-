@@ -1,0 +1,12 @@
+scores = []
+
+for i in range(5):
+    score = int(input(f"Enter score of student {i+1}: "))
+    scores.append(score)
+print()
+
+for i, score in enumerate(scores, 1):
+    if score >= 50:
+        print(f"Student {i}: {score} -> ผ่าน")
+    else:
+        print(f"Student {i}: {score} -> ไม่ผ่าน")

@@ -1,0 +1,9 @@
+def calculate_triangle_area(length, width):
+    area = length * width * float(0.5)
+    print(f"tritangle with length {length} and width {width}")
+    print(f"Area = {length} × {width} × 0.5 = {area}")
+    print()
+
+print("Calculating triangle areas:")
+calculate_triangle_area(5, 3)
+calculate_triangle_area(10, 7)

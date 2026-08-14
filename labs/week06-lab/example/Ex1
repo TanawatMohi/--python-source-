@@ -1,0 +1,13 @@
+def greet_person(name):
+    """Greets a person by name"""
+    print(f"Hello, {name}! Nice to meet you.")
+
+print("Calling greet_person with different names:")
+greet_person("Alice") #Calling greet_person with different names: Alice
+#Hello, Alice! Nice to meet you.
+greet_person("Bob") #Calling greet_person with different names: Bob
+#Hello, Bob! Nice to meet you.
+greet_person("Charlie") #Calling greet_person with different names: Charlie
+#Hello, Charlie! Nice to meet you.
+print()
+    

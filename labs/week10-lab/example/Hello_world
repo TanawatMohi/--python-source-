@@ -1,0 +1,8 @@
+print("\n=== ITERATING THROUGH STRING ===")
+count = 0
+text = input("Enter your name: ")
+oneletter = input("Enter letter: ")
+for letter in text:
+    if letter == oneletter:
+        count += 1
+print(f"{count} letters 'o' found in '{text}'")

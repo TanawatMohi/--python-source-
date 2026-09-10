@@ -1,0 +1,45 @@
+def main():
+	text = input("Enter text: ")
+	words = text.split()
+	letters = [character.lower() for character in text if character.isalpha()]
+	vowels = "aeiou"
+	vowel_letters = [character for character in letters if character in vowels]
+	consonants = [character for character in letters if character not in vowels]
+
+	character_counts = {}
+	for character in text.lower():
+		if not character.isspace():
+			character_counts[character] = character_counts.get(character, 0) + 1
+	most_frequent = max(character_counts, key=character_counts.get) if character_counts else ""
+	longest = max(words, key=len) if words else ""
+	shortest = min(words, key=len) if words else ""
+	vowel_starting = [word for word in words if word[0].lower() in vowels]
+	consonant_starting = [word for word in words if word[0].lower() not in vowels]
+
+	print("\n=== TEXT ANALYSIS REPORT ===")
+	print("Character Analysis:")
+	print(f"- Total characters: {len(text)} (with spaces), {len(text.replace(' ', ''))} (without spaces)")
+	print(f"- Vowels: {len(vowel_letters)} ({', '.join(vowel_letters)})")
+	print(f"- Consonants: {len(consonants)}")
+	if most_frequent:
+		print(f"- Most frequent: '{most_frequent}' (appears {character_counts[most_frequent]} times)")
+	else:
+		print("- Most frequent: none")
+
+	print("\nWord Analysis:")
+	print(f"- Total words: {len(words)}")
+	print(f'- Longest word: "{longest}" ({len(longest)} letters)' if longest else "- Longest word: none")
+	print(f'- Shortest word: "{shortest}" ({len(shortest)} letters)' if shortest else "- Shortest word: none")
+	print(f'- Words starting with vowels: {len(vowel_starting)} ({", ".join(vowel_starting)})')
+	print(f'- Words starting with consonants: {len(consonant_starting)}')
+
+	print("\nTransformations:")
+	print(f"- Title Case: {text.title()}")
+	print(f"- Upper Case: {text.upper()}")
+	print(f"- Lower Case: {text.lower()}")
+	print(f"- Acronym: {''.join(word[0].upper() for word in words)}")
+	print(f"- Reversed Text: {text[::-1]}")
+	print(f"- Words Reversed: {' '.join(word[::-1] for word in words)}")
+
+if __name__ == "__main__":
+	main()

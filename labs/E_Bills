@@ -1,0 +1,50 @@
+def calculate_electricity():
+    while True:
+        print("====== Electric Bills Program ======")
+        print("1. Calculate Electric Bills")
+        print("2. Exit")
+        choice = input("choose: ")
+        if choice == '1':
+            while True:
+                try:
+                    units = float(input("\nInput electricity consumption (units)า: "))
+                    if units < 0:
+                        print("The number of electricity units cannot be negative. Please enter it again.")
+                        continue
+                    break
+                except ValueError:
+                    print("Please enter the correct number.")
+            tier1, tier2, tier3 = 0.0, 0.0, 0.0
+            
+            if units > 100:
+                tier1 = 50 * 2.50
+                tier2 = 50 * 3.00
+                tier3 = (units - 100) * 3.50
+            elif units > 50:
+                tier1 = 50 * 2.50
+                tier2 = (units - 50) * 3.00
+            else:
+                tier1 = units * 2.50
+            service_fee = 25.00
+            total = tier1 + tier2 + tier3 + service_fee
+            print("\nElectricity Bill Details:")
+            if units > 50:
+                print(f"1-50 units: {tier1:.2f} Bath")
+            else:
+                print(f"1-{int(units)} units: {tier1:.2f} Bath")
+            if units > 50:
+                if units > 100:
+                    print(f"51-100 units: {tier2:.2f} Bath")
+                    print(f"101-{int(units)} units: {tier3:.2f} Bath")
+                else:
+                    print(f"51-{int(units)} units: {tier2:.2f} Bath")
+            print(f"Service charge: {service_fee:.2f} Bath")
+            print(f"Total electricity charges: {total:.2f} Bath\n")
+            
+        elif choice == '2':
+            print("Exit")
+            break
+        else:
+            print("Invalid menu selection. Please select again.\n")
+
+calculate_electricity()

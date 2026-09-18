@@ -1,0 +1,31 @@
+try:
+    num1 = float(input("FstNumber: "))
+    num2 = float(input("ScndNumber: "))
+    operator = input("Sign(+,-,*,/): ")
+    result = 0
+    if operator == "+":
+        result = num1+num2
+    elif operator == "-":
+        result = num1-num2
+    elif operator == "*":
+        result = num1*num2
+    elif operator == "/":
+        result = num1/num2
+    else:
+        raise ValueError("Sign +,-,*,/ only")
+    print(f"{num1} {operator} {num2} = {result}")
+
+except ValueError:
+    print("Input only Numbers")
+
+except ZeroDivisionError:
+    print("Cannot divide by 0")
+
+except Exception:
+    print("Nah I would win")
+
+else:
+    print("Already Calculate")
+
+finally:
+    print("End of services")

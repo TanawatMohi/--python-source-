@@ -5,7 +5,10 @@ print("Hello, World!")
 # Exercise 2: Custom Print Statement
 # Write a print statement that displays your name, e.g., "My name is Your Name
 print("My name is Your Name")
+<<<<<<< HEAD
 print("My name is Nick")
+=======
+>>>>>>> upstream/main
 
 # Exercise 3: Multiple Print Statements
 # Write three print statements that display:
@@ -13,9 +16,13 @@ print("My name is Nick")
 # Line 2: Your age
 # Line 3: Your favorite hobbyๅ
 # Write your code here:
+<<<<<<< HEAD
 print("Tanawat")
 print("19")
 print("listen to music")
+=======
+
+>>>>>>> upstream/main
 
 # Exercise 4: Print with Different Content
 # Use print() to display the following (one per line):
@@ -24,9 +31,14 @@ print("listen to music")
 # - A sentence with spaces
 
 # Write your code here:
+<<<<<<< HEAD
 print("3")
 print("word")
 print("Give me B+")
+=======
+
+
+>>>>>>> upstream/main
 
 # Exercise 5: Understanding Print Behavior
 # What happens when you run these? Try to predict before running:
@@ -37,6 +49,7 @@ print("Third", "line", "with", "multiple", "arguments")
 # Exercise 6: Comments Practice
 # Add comments above each print statement explaining what it does
 
+<<<<<<< HEAD
 # ขอต้อนรับเข้าสู่การเขียนโปรแกรมภาษาไพท่อน
 print("Welcome to Python programming!")
 
@@ -44,4 +57,13 @@ print("Welcome to Python programming!")
 print("Python is fun!")
 
 # ฉันกำลังเรียนการเขียนโค้ด
+=======
+# 
+print("Welcome to Python programming!")
+
+# 
+print("Python is fun!")
+
+# 
+>>>>>>> upstream/main
 print("I am learning to code!")

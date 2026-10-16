@@ -15,11 +15,11 @@ except ValueError:
 phone_is_valid = len(phone) == 10 and phone.isdigit()
 
 print("\nValidation Results:")
+
 if name_is_valid:
 	print("Name: Valid (contains only letters and spaces)")
 else:
 	print("Name: Invalid (use only letters and spaces)")
-
 if age_is_valid:
 	print("Age: Valid ({} years old)".format(age))
 else:

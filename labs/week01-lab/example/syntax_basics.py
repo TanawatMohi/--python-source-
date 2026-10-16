@@ -5,11 +5,7 @@ Learn about variables, data types, and basic Python syntax.
 
 # Exercise 1: Variables and Assignment
 # Create variables for the following information about yourself:
-<<<<<<< HEAD
 name = "Tanawat"  # Replace with your actual name
-=======
-name = "Your Name Here"  # Replace with your actual name
->>>>>>> upstream/main
 age = 20  # Replace with your actual age
 height = 5.8  # Replace with your height in feet
 is_student = True  # True or False
@@ -34,13 +30,8 @@ print("Type of my_float:", type(my_float))
 print("Type of my_boolean:", type(my_boolean))
 
 # Exercise 3: String Operations
-<<<<<<< HEAD
 first_name = "Tanawat"
 last_name = "Mohiran"
-=======
-first_name = "John"
-last_name = "Doe"
->>>>>>> upstream/main
 
 # Concatenate strings
 full_name = first_name + " " + last_name
@@ -64,11 +55,7 @@ print("Power:", num1 ** num2)
 
 # Exercise 5: Variable Reassignment
 # Start with a variable and change its value
-<<<<<<< HEAD
 counter = 5
-=======
-counter = 0
->>>>>>> upstream/main
 print("Initial counter:", counter)
 
 counter = counter + 1
@@ -90,7 +77,6 @@ print("a =", a, "b =", b, "c =", c)
 # Complete the following assignments:
 
 # String variable containing your favorite color
-<<<<<<< HEAD
 favorite_color = "Blue"
 
 # Integer variable with the current year
@@ -101,18 +87,6 @@ favorite_number = 3.14
 
 # Boolean variable indicating if you like pizza
 likes_pizza = True
-=======
-favorite_color = 
-
-# Integer variable with the current year
-current_year = 
-
-# Float variable with your favorite number (with decimal)
-favorite_number = 
-
-# Boolean variable indicating if you like pizza
-likes_pizza = 
->>>>>>> upstream/main
 
 # Print all variables with descriptive messages
 print("My favorite color is:", favorite_color)
